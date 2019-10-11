@@ -150,3 +150,5 @@ def make_game_session():
 if __name__ == "__main__":
     scoreboard.init_database(DB)
     app.run()
+    # app.run(host= '0.0.0.0')  # use this line to run across network assuming no firewall
+    # its not recommended since flask is designed to be run behind a proxy in production

@@ -72,7 +72,6 @@ def consume_invitation(db, session_id):
 
 
 def get_winners(limit):
-    print(f'limit:{limit}')
     results = GameResult.query.order_by(desc(GameResult.timestamp)).limit(limit).all()
     return [dict(winner=v.winner.name, timestamp=v.timestamp) for v in results]
 
